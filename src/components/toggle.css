@@ -1,0 +1,27 @@
+.togglebtn{
+    background-color: red;
+    height: 35px;
+    width: 70px;
+    position: relative;
+    border-radius:50px;
+}
+
+.thumb{
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    z-index: 1000;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    border-radius: 50%;
+}
+.back{
+    background-color: black;
+}
+
+.thumb1{
+    transition: transform 0.3s;
+
+    transform: translateX(35px);
+}

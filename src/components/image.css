@@ -1,0 +1,169 @@
+.dogimage {
+    background-color: black;
+}
+
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+}
+
+.container {
+    display: flex;
+    gap: 10%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 5px;
+}
+h1,h2{
+    color: azure;
+}
+.close{
+    position: absolute;
+
+    left: 80%;
+    font-size: 3rem;
+    background-color:white;
+    color: black;
+    border: none;
+    width: 50%x;
+}
+.editbox1{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 80px;
+    height: 80vh;
+    position: absolute;
+    padding: 30px;
+    transition:  all 10s ease-in-out ;
+    transform: translateX(-50%, -50%);
+
+    left: 80%;
+    background-color: white;
+}
+.colorpicker{
+    display: flex;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn {
+    height: 50px;
+    width: 50px;
+    color: red;
+    font-size: 2rem;
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.btn:hover {
+    background-color: red;
+    color: black;
+}
+
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.imagecontainer {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transition:  all 1s ease-in-out ;
+    transform: translate(-50%, -50%);
+}
+.resetbtn {
+    background-color: #000080; 
+    color: white;
+    padding: 13px;
+    border: 2px solid #5D4037;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 1s ease-in;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+label{
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.resetbtn:hover {
+    background-color: sienna; 
+    color: white;
+    border: 2px solid #5D4037;
+}
+
+@keyframes crossMove {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, -20px); }
+    50% { transform: translate(-20px, 20px); }
+    75% { transform: translate(10px, -10px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .cross-move {
+    animation: crossMove 0.8s ease-in-out;
+  }
+  
+@media screen and (max-width: 740px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+    }
+    .imagecontainer {
+        width: 350px;
+        height: 350px;
+    }
+    .imagecontainer img {
+        max-width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .btn {
+        height: 35px;
+        width: 35px;
+        font-size: 1.2rem;
+    }
+    .imagecontainer {
+        width: 90%;
+        height: auto;
+    }
+    .imagecontainer img {
+        max-width: 150px;
+    }
+}
