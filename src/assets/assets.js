@@ -18,7 +18,7 @@ import rectangle from "./rectangle.png"
 import sqaure from "./square.png"
 import snail from "./snail.png"
 import star from "./star.png"
-
+import BackImage from "./backimage.jpg"
 const Pictures = {
     dog,
     horse,
@@ -39,7 +39,8 @@ const Pictures = {
     circle,
     rectangle,
     snail,
-    star
+    star,
+    BackImage
 }
 
 export default  Pictures;

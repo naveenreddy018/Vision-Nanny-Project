@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./interface.css";
+import Pictures from '../../assets/assets';
 
 function Interface() {
   const [expanded, setExpanded] = useState({
@@ -17,7 +18,9 @@ function Interface() {
   };
 
   return (
-    <div className='intrefacecontainer'>
+    <div className='intrefacecontainer' style={{ backgroundImage : Pictures.BackImage ,backgroundRepeat : "no-repeat"}}>
+      <div className='grailmaker-animation'>GRAILMAKER INNOVATIONS</div>
+      
       <Link to="/animals" style={{ textDecoration: "none" }} >
         <div className='interface'>
           <h1>🐾 ANIMALS</h1>
@@ -39,26 +42,15 @@ function Interface() {
         </div>
       </Link>
 
-
-
       <div className={`interface ${expanded.fruits ? 'expanded' : ''}`} onClick={() => toggleExpand('fruits')}>
         Fruits
         {expanded.fruits && <div className="subscribed">Subscribed</div>}
       </div>
 
-      {/* <Link style={{ textDecoration: "none" }} to="/strips" >
-        <div className='interface'>
-          <h1>🔷 Movements</h1>
-          <div>As movement aids visual recognition, this activity helps improve dynamic visual attention and tracking. It also helps with CVI assessment.</div>
-        </div>
-      </Link> */}
-
-
       <div className={`interface ${expanded.vegetables ? 'expanded' : ''}`} onClick={() => toggleExpand('vegetables')}>
         Vegetables
         {expanded.vegetables && <div className="subscribed">Subscribed</div>}
       </div>
-
 
       <div className={`interface ${expanded.everydayObject ? 'expanded' : ''}`} onClick={() => toggleExpand('everydayObject')}>
         Everyday Object
