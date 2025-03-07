@@ -1,10 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Interface from "./components/interface/interface";
 import Birds from "./components/fruit";
 import Shapes from "./components/shapes";
 import Image1 from "./components/image";
-
 
 function App() {
   return (
