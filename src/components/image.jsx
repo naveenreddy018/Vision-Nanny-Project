@@ -392,6 +392,7 @@ const ImageColorChanger = () => {
 
       <div onClick={shakeimage} className={`imagecontainer ${shake ? "imagem" : ""}`}>
         <canvas
+        
           ref={canvasRef}
           className={`border-2 border-black mt-4 `}
           onClick={handleImageClick}
