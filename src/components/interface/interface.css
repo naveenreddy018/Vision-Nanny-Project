@@ -1,94 +1,117 @@
-.intrefacecontainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+
+.interface-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    width: 95%;
-    margin: auto;
     padding: 20px;
-   padding-top: 10%;
-    padding-left: 5%; 
+    background: linear-gradient(to right, #ffffff, #ff99cc);
+    min-height: 100vh;
+  }
+  
 
-}
-
-.interface {
-    background-color: #ff6347;
-    padding: 20px;
+  .company-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff3366;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 20px;
+    width: 100%;
+   
+  }
+  
+  
+  .interface-card {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Ensures even spacing */
     align-items: center;
-    height: 180px;
-    width: 280px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 15px;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 150px; /* Set a fixed height for uniformity */
+  }
+  
+  .interface-card p {
+    flex-grow: 1; /* Ensures text is evenly spaced */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  
 
-h1,h2{
+  .interface-card:hover {
+    transform: scale(1.05);
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+
+  .interface-link {
     text-decoration: none;
-}
-.grailmaker-animation {
-    position: absolute;
-    top: 10px;
-    right: 100%;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    white-space: nowrap;
-    animation: moveLeft 10s linear infinite;
-    font-size: 5rem;
   }
   
-  @keyframes moveLeft {
-    0% {
-      right: 100%;
-    }
-    100% {
-      right: -20%;
-    }
+ 
+  .expanded {
+    background: linear-gradient(135deg, #ff5733, #ff784e);
   }
   
-.expanded {
-    height: 250px; 
-    background-color: #ff4500; 
-}
-
-
-.subscribed {
+  .subscribed {
     margin-top: 10px;
     font-size: 1rem;
     background: #fff;
     color: #333;
     padding: 5px 10px;
     border-radius: 5px;
-}
+  }
+  
+  .subscribed:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-
-@media screen and (max-width: 740px) {
-    .intrefacecontainer {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+  @media screen and (max-width: 740px) {
+    .company-heading {
+      font-size: 2.5rem;
     }
-    .interface {
-        font-size: 1rem;
-        min-height: 180px;
+    .interface-card {
+      font-size: 1rem;
     }
-}
-
-@media screen and (max-width: 428px) {
-    .intrefacecontainer {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
+  }
+  
+  @media screen and (max-width: 428px) {
+    .company-heading {
+      font-size: 2rem;
     }
-    .interface {
-        font-size: 0.9rem;
-        min-height: 160px;
+    .interface-card {
+      font-size: 0.9rem;
     }
-}
+  }
+  

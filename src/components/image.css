@@ -1,5 +1,8 @@
 
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
 .dogimage {
     background-color: black;
 
@@ -14,11 +17,19 @@
     position: absolute;
     top: 10%;
     left: 90%;
+    
 }
 
+
+
+
+canvas {
+    pointer-events: none; 
+  }
+  
 .container {
     display: flex;
-    gap: 10%;
+    gap: 5%;
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
@@ -27,16 +38,26 @@
     padding: 5px;
 }
 h1,h2{
-    color: azure;
+    font-size: 1.2rem;
+}
+.text-center {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 10%;
+    font-weight: 100;
 }
 .close{
     position: absolute;
 
     left: 80%;
     font-size: 3rem;
-    background-color:white;
+    background-color:pink;
     color: black;
     border: none;
+  
     width: 50%x;
 }
 .editbox1{
@@ -45,28 +66,53 @@ h1,h2{
     justify-content:flex-start;
     align-items: flex-start;
     gap: 80px;
-    height: 80vh;
-    position: absolute;
+    height:90vh; 
+    width: 230px;
+    position: fixed;
     padding: 30px;
-    transition:  all 10s ease-in-out ;
+    transition:  all 10s;
     transform: translateX(-50%, -50%);
-
-    left: 80%;
-    background-color: white;
+    animation: Left 0.8s ;
+    left: 73%;
+    background-color: pink;
+}
+@keyframes Left{
+    from{
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0px);
+    }
 }
 .colorpicker{
     display: flex;
     gap: 50px;
     justify-content: flex-start;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.settoggle{
+    display: flex;
+    gap: 50px;
+    color: black;
+    font-size: 0.6rem;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.settoggle h1{
+    font-weight: 200;
+}
+.setbtn{
+    height:1.5rem;    
+}
 .btn {
     height: 50px;
     width: 50px;
     color: red;
     font-size: 2rem;
-    background-color: black;
+    z-index:10;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -93,24 +139,43 @@ h1,h2{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 45%;
-    left: 50%;
+    top: 5%;
+    left: 25%;
     transition:  all 1s ease-in-out ;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+ 
+   
 }
+.imagem {
+    animation: imageMove 1s ease-in-out 3; /* Runs 3 times instead of infinite */
+    will-change: transform;
+}
+
+@keyframes imageMove {
+    0% { transform: translate(10px) rotate(2deg); }
+    25% { transform: translateX(-10px) rotate(-2deg); }
+    50% { transform: translateY(10px) rotate(2deg); }
+    75% { transform: translateZ(-10px, 10px) rotate(-2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+
+
 .resetbtn {
     background-color: #000080; 
     color: white;
-    padding: 13px;
+    padding: 10px;
     border: 2px solid #5D4037;
-    font-size: 1.05rem;
+    /* font-size: 1.2rem; */
     cursor: pointer;
     transition: all 1s ease-in;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 label{
-    font-size: 1.2rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-size: 1.2rem; */
+    font-weight: 100;
+  
 }
 .resetbtn:hover {
     background-color: sienna; 
